@@ -1,9 +1,11 @@
+# General
 __pycache__/
-logs/
 *.pyc
 .DS_Store
 *.env
 .venv
+venv*/
+venv
 .vscode
 *.ipynb
 env/
@@ -11,58 +13,51 @@ venv/
 !notebooks/jupyter/.gitkeep
 .python-version
 .mypy_cache
+.ruff_cache
+.pytest_cache
 iframe_figures/
 exports/*
 .idea
 .coverage
+.scannerwork
 htmlcov
-openbb_terminal/config_plot.py
-openbb_terminal/config_terminal.py
-openbb_terminal/feature_flags.py
-openbb_terminal/reports/stored/*
-!openbb_terminal/reports/stored/.gitkeep
-!openbb_terminal/dashboards/voila/*.ipynb
-!openbb_terminal/reports/*.ipynb
-openbb_terminal/portfolio/portfolios/*
 **/.ipynb_checkpoints
 *.swp
 *.http
 .coverage.*
-!openbb_terminal/custom_reports/*/.ipynb
+*_tests.csv
+*_sdk_audit.csv
+!build/docker/compose.env
+.dccache
+*rome.json
+**/node_modules/*
+.cursorignore
+darts_logs/
+custom_imports/*.csv
+custom_imports/*/*.csv
+cache/
+lightning_logs/
+*/mocked_path
+*.pem
 
-# pyinstaller artifacts
+# CLI
 *.pyo
-dist/*
-build/terminal
+**/dist/*
+build/cli
 build/nsis/app
 DMG/*
 *.dmg
+*.sh
+cli/openbb_cli/assets/styles/user/hub.richstyle.json
 
-# Jupyter Lab Extension build files
-jupyterlab/**/build
-jupyterlab/*/*.bundle.*
-jupyterlab/*/lib/
-jupyterlab/*/*/labextension/
-jupyterlab/*/node_modules/
-jupyterlab/*/*/node_modules/
-jupyterlab/*/*.egg-info/
-jupyterlab/*/.ipynb_checkpoints
-jupyterlab/*/*.tsbuildinfo
-jupyterlab/*/ui-tests/test-results/
-jupyterlab/*/ui-tests/tests/*.ts-snapshots/
+# Platform
+openbb_platform/openbb/package/*
 
-# Sphinx documentation build files
-docs/_build
+# Dev Container env
+obb/*
 
-# User stylesheets
-styles/user
-
-# the file containing the API keys for the web version
-openbb_terminal_web/setenv
-
-# dart models
-darts_logs/
-
-# User data
-custom_imports/*.csv
-custom_imports/*/*.csv
+# OpenBB Distribution
+!build/conda/installer/*.sh
+*.pkg
+*.exe
+build/conda/tmp
